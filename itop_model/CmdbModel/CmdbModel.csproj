@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF616021-FA6A-43A8-8374-67DBF3443FE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CmdbModel</RootNamespace>
+    <AssemblyName>CmdbModel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\attachments\Attachment.cs" />
+    <Compile Include="Model\bridge_virtualization_storage\lnkVirtualDeviceToVolume.cs" />
+    <Compile Include="Model\bridge_virtualization_storage\LogicalVolume.cs" />
+    <Compile Include="Model\change_mgmt\Change.cs" />
+    <Compile Include="Model\change_mgmt_itil\ApprovedChange.cs" />
+    <Compile Include="Model\change_mgmt_itil\Change.cs" />
+    <Compile Include="Model\change_mgmt_itil\EmergencyChange.cs" />
+    <Compile Include="Model\change_mgmt_itil\NormalChange.cs" />
+    <Compile Include="Model\change_mgmt_itil\RoutineChange.cs" />
+    <Compile Include="Model\config_mgmt\ApplicationSolution.cs" />
+    <Compile Include="Model\config_mgmt\Brand.cs" />
+    <Compile Include="Model\config_mgmt\BusinessProcess.cs" />
+    <Compile Include="Model\config_mgmt\ConnectableCI.cs" />
+    <Compile Include="Model\config_mgmt\Contact.cs" />
+    <Compile Include="Model\config_mgmt\ContactType.cs" />
+    <Compile Include="Model\config_mgmt\DatabaseSchema.cs" />
+    <Compile Include="Model\config_mgmt\DatacenterDevice.cs" />
+    <Compile Include="Model\config_mgmt\DBServer.cs" />
+    <Compile Include="Model\config_mgmt\Document.cs" />
+    <Compile Include="Model\config_mgmt\DocumentFile.cs" />
+    <Compile Include="Model\config_mgmt\DocumentNote.cs" />
+    <Compile Include="Model\config_mgmt\DocumentType.cs" />
+    <Compile Include="Model\config_mgmt\DocumentWeb.cs" />
+    <Compile Include="Model\config_mgmt\FunctionalCI.cs" />
+    <Compile Include="Model\config_mgmt\Group.cs" />
+    <Compile Include="Model\config_mgmt\IOSVersion.cs" />
+    <Compile Include="Model\config_mgmt\IPInterface.cs" />
+    <Compile Include="Model\config_mgmt\Licence.cs" />
+    <Compile Include="Model\config_mgmt\lnkApplicationSolutionToBusinessProcess.cs" />
+    <Compile Include="Model\config_mgmt\lnkApplicationSolutionToFunctionalCI.cs" />
+    <Compile Include="Model\config_mgmt\lnkConnectableCIToNetworkDevice.cs" />
+    <Compile Include="Model\config_mgmt\lnkContactToFunctionalCI.cs" />
+    <Compile Include="Model\config_mgmt\lnkDocumentToFunctionalCI.cs" />
+    <Compile Include="Model\config_mgmt\lnkDocumentToLicence.cs" />
+    <Compile Include="Model\config_mgmt\lnkDocumentToPatch.cs" />
+    <Compile Include="Model\config_mgmt\lnkDocumentToSoftware.cs" />
+    <Compile Include="Model\config_mgmt\lnkFunctionalCIToOSPatch.cs" />
+    <Compile Include="Model\config_mgmt\lnkGroupToCI.cs" />
+    <Compile Include="Model\config_mgmt\lnkPersonToTeam.cs" />
+    <Compile Include="Model\config_mgmt\lnkPhysicalInterfaceToVLAN.cs" />
+    <Compile Include="Model\config_mgmt\lnkSoftwareInstanceToSoftwarePatch.cs" />
+    <Compile Include="Model\config_mgmt\lnkSubnetToVLAN.cs" />
+    <Compile Include="Model\config_mgmt\Location.cs" />
+    <Compile Include="Model\config_mgmt\Middleware.cs" />
+    <Compile Include="Model\config_mgmt\MiddlewareInstance.cs" />
+    <Compile Include="Model\config_mgmt\Model.cs" />
+    <Compile Include="Model\config_mgmt\NetworkDevice.cs" />
+    <Compile Include="Model\config_mgmt\NetworkDeviceType.cs" />
+    <Compile Include="Model\config_mgmt\NetworkInterface.cs" />
+    <Compile Include="Model\config_mgmt\Organization.cs" />
+    <Compile Include="Model\config_mgmt\OSFamily.cs" />
+    <Compile Include="Model\config_mgmt\OSLicence.cs" />
+    <Compile Include="Model\config_mgmt\OSPatch.cs" />
+    <Compile Include="Model\config_mgmt\OSVersion.cs" />
+    <Compile Include="Model\config_mgmt\OtherSoftware.cs" />
+    <Compile Include="Model\config_mgmt\Patch.cs" />
+    <Compile Include="Model\config_mgmt\PCSoftware.cs" />
+    <Compile Include="Model\config_mgmt\Person.cs" />
+    <Compile Include="Model\config_mgmt\PhysicalDevice.cs" />
+    <Compile Include="Model\config_mgmt\PhysicalInterface.cs" />
+    <Compile Include="Model\config_mgmt\Server.cs" />
+    <Compile Include="Model\config_mgmt\Software.cs" />
+    <Compile Include="Model\config_mgmt\SoftwareInstance.cs" />
+    <Compile Include="Model\config_mgmt\SoftwareLicence.cs" />
+    <Compile Include="Model\config_mgmt\SoftwarePatch.cs" />
+    <Compile Include="Model\config_mgmt\Subnet.cs" />
+    <Compile Include="Model\config_mgmt\Team.cs" />
+    <Compile Include="Model\config_mgmt\Typology.cs" />
+    <Compile Include="Model\config_mgmt\VLAN.cs" />
+    <Compile Include="Model\config_mgmt\WebApplication.cs" />
+    <Compile Include="Model\config_mgmt\WebServer.cs" />
+    <Compile Include="Model\datacenter_mgmt\Enclosure.cs" />
+    <Compile Include="Model\datacenter_mgmt\PDU.cs" />
+    <Compile Include="Model\datacenter_mgmt\PowerConnection.cs" />
+    <Compile Include="Model\datacenter_mgmt\PowerSource.cs" />
+    <Compile Include="Model\datacenter_mgmt\Rack.cs" />
+    <Compile Include="Model\DBObject.cs" />
+    <Compile Include="Model\enduser_devices\IPPhone.cs" />
+    <Compile Include="Model\enduser_devices\MobilePhone.cs" />
+    <Compile Include="Model\enduser_devices\PC.cs" />
+    <Compile Include="Model\enduser_devices\Peripheral.cs" />
+    <Compile Include="Model\enduser_devices\Phone.cs" />
+    <Compile Include="Model\enduser_devices\Printer.cs" />
+    <Compile Include="Model\enduser_devices\Tablet.cs" />
+    <Compile Include="Model\enduser_devices\TelephonyCI.cs" />
+    <Compile Include="Model\full_itil\ServiceSubcategory.cs" />
+    <Compile Include="Model\tickets\Ticket.cs" />
+    <Compile Include="Model\incident_mgmt_itil\Incident.cs" />
+    <Compile Include="Model\incident_mgmt_itil\ServiceSubcategory.cs" />
+    <Compile Include="Model\knownerror_mgmt\FAQ.cs" />
+    <Compile Include="Model\knownerror_mgmt\FAQCategory.cs" />
+    <Compile Include="Model\knownerror_mgmt\KnownError.cs" />
+    <Compile Include="Model\knownerror_mgmt\lnkDocumentToError.cs" />
+    <Compile Include="Model\knownerror_mgmt\lnkErrorToFunctionalCI.cs" />
+    <Compile Include="Model\problem_mgmt\Problem.cs" />
+    <Compile Include="Model\profiles_itil\Action.cs" />
+    <Compile Include="Model\profiles_itil\Attachment.cs" />
+    <Compile Include="Model\profiles_itil\AuditCategory.cs" />
+    <Compile Include="Model\profiles_itil\AuditRule.cs" />
+    <Compile Include="Model\profiles_itil\Change.cs" />
+    <Compile Include="Model\profiles_itil\Contact.cs" />
+    <Compile Include="Model\profiles_itil\Contract.cs" />
+    <Compile Include="Model\profiles_itil\CustomerContract.cs" />
+    <Compile Include="Model\profiles_itil\DeliveryModel.cs" />
+    <Compile Include="Model\profiles_itil\Document.cs" />
+    <Compile Include="Model\profiles_itil\EmergencyChange.cs" />
+    <Compile Include="Model\profiles_itil\FAQ.cs" />
+    <Compile Include="Model\profiles_itil\FAQCategory.cs" />
+    <Compile Include="Model\profiles_itil\FunctionalCI.cs" />
+    <Compile Include="Model\profiles_itil\Group.cs" />
+    <Compile Include="Model\profiles_itil\Incident.cs" />
+    <Compile Include="Model\profiles_itil\KnownError.cs" />
+    <Compile Include="Model\profiles_itil\Licence.cs" />
+    <Compile Include="Model\profiles_itil\lnkContactToTicket.cs" />
+    <Compile Include="Model\profiles_itil\lnkFunctionalCIToTicket.cs" />
+    <Compile Include="Model\profiles_itil\lnkTriggerAction.cs" />
+    <Compile Include="Model\profiles_itil\Location.cs" />
+    <Compile Include="Model\profiles_itil\LogicalVolume.cs" />
+    <Compile Include="Model\profiles_itil\NASFileSystem.cs" />
+    <Compile Include="Model\profiles_itil\NetworkInterface.cs" />
+    <Compile Include="Model\profiles_itil\NormalChange.cs" />
+    <Compile Include="Model\profiles_itil\Organization.cs" />
+    <Compile Include="Model\profiles_itil\Patch.cs" />
+    <Compile Include="Model\profiles_itil\Problem.cs" />
+    <Compile Include="Model\profiles_itil\ProviderContract.cs" />
+    <Compile Include="Model\profiles_itil\Query.cs" />
+    <Compile Include="Model\profiles_itil\QueryOQL.cs" />
+    <Compile Include="Model\profiles_itil\ResourceAdminMenu.cs" />
+    <Compile Include="Model\profiles_itil\ResourceRunQueriesMenu.cs" />
+    <Compile Include="Model\profiles_itil\RoutineChange.cs" />
+    <Compile Include="Model\profiles_itil\Service.cs" />
+    <Compile Include="Model\profiles_itil\ServiceFamily.cs" />
+    <Compile Include="Model\profiles_itil\ServiceSubcategory.cs" />
+    <Compile Include="Model\profiles_itil\SLA.cs" />
+    <Compile Include="Model\profiles_itil\SLT.cs" />
+    <Compile Include="Model\profiles_itil\Software.cs" />
+    <Compile Include="Model\profiles_itil\Subnet.cs" />
+    <Compile Include="Model\profiles_itil\SynchroAttribute.cs" />
+    <Compile Include="Model\profiles_itil\SynchroDataSource.cs" />
+    <Compile Include="Model\profiles_itil\Tape.cs" />
+    <Compile Include="Model\profiles_itil\Trigger.cs" />
+    <Compile Include="Model\profiles_itil\Typology.cs" />
+    <Compile Include="Model\profiles_itil\URP_Profiles.cs" />
+    <Compile Include="Model\profiles_itil\URP_UserOrg.cs" />
+    <Compile Include="Model\profiles_itil\URP_UserProfile.cs" />
+    <Compile Include="Model\profiles_itil\User.cs" />
+    <Compile Include="Model\profiles_itil\UserRequest.cs" />
+    <Compile Include="Model\profiles_itil\VLAN.cs" />
+    <Compile Include="Model\profiles_itil\WorkOrder.cs" />
+    <Compile Include="Model\request_mgmt\UserRequest.cs" />
+    <Compile Include="Model\request_mgmt_itil\ServiceSubcategory.cs" />
+    <Compile Include="Model\request_mgmt_itil\UserRequest.cs" />
+    <Compile Include="Model\service_mgmt\Contract.cs" />
+    <Compile Include="Model\service_mgmt\ContractType.cs" />
+    <Compile Include="Model\service_mgmt\CustomerContract.cs" />
+    <Compile Include="Model\service_mgmt\DeliveryModel.cs" />
+    <Compile Include="Model\service_mgmt\lnkContactToContract.cs" />
+    <Compile Include="Model\service_mgmt\lnkContactToService.cs" />
+    <Compile Include="Model\service_mgmt\lnkContractToDocument.cs" />
+    <Compile Include="Model\service_mgmt\lnkCustomerContractToService.cs" />
+    <Compile Include="Model\service_mgmt\lnkDeliveryModelToContact.cs" />
+    <Compile Include="Model\service_mgmt\lnkDocumentToService.cs" />
+    <Compile Include="Model\service_mgmt\lnkFunctionalCIToProviderContract.cs" />
+    <Compile Include="Model\service_mgmt\lnkFunctionalCIToService.cs" />
+    <Compile Include="Model\service_mgmt\lnkProviderContractToService.cs" />
+    <Compile Include="Model\service_mgmt\lnkSLAToSLT.cs" />
+    <Compile Include="Model\service_mgmt\Organization.cs" />
+    <Compile Include="Model\service_mgmt\ProviderContract.cs" />
+    <Compile Include="Model\service_mgmt\Service.cs" />
+    <Compile Include="Model\service_mgmt\ServiceFamily.cs" />
+    <Compile Include="Model\service_mgmt\ServiceSubcategory.cs" />
+    <Compile Include="Model\service_mgmt\SLA.cs" />
+    <Compile Include="Model\service_mgmt\SLT.cs" />
+    <Compile Include="Model\service_mgmt\Ticket.cs" />
+    <Compile Include="Model\service_mgmt_provider\Contract.cs" />
+    <Compile Include="Model\service_mgmt_provider\ContractType.cs" />
+    <Compile Include="Model\service_mgmt_provider\CustomerContract.cs" />
+    <Compile Include="Model\service_mgmt_provider\DeliveryModel.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkContactToContract.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkContactToService.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkContractToDocument.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkCustomerContractToFunctionalCI.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkCustomerContractToProviderContract.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkCustomerContractToService.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkDeliveryModelToContact.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkDocumentToService.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkFunctionalCIToProviderContract.cs" />
+    <Compile Include="Model\service_mgmt_provider\lnkSLAToSLT.cs" />
+    <Compile Include="Model\service_mgmt_provider\Organization.cs" />
+    <Compile Include="Model\service_mgmt_provider\ProviderContract.cs" />
+    <Compile Include="Model\service_mgmt_provider\Service.cs" />
+    <Compile Include="Model\service_mgmt_provider\ServiceFamily.cs" />
+    <Compile Include="Model\service_mgmt_provider\ServiceSubcategory.cs" />
+    <Compile Include="Model\service_mgmt_provider\SLA.cs" />
+    <Compile Include="Model\service_mgmt_provider\SLT.cs" />
+    <Compile Include="Model\service_mgmt_provider\Ticket.cs" />
+    <Compile Include="Model\storage_mgmt\FiberChannelInterface.cs" />
+    <Compile Include="Model\storage_mgmt\lnkSanToDatacenterDevice.cs" />
+    <Compile Include="Model\storage_mgmt\lnkServerToVolume.cs" />
+    <Compile Include="Model\storage_mgmt\LogicalVolume.cs" />
+    <Compile Include="Model\storage_mgmt\NAS.cs" />
+    <Compile Include="Model\storage_mgmt\NASFileSystem.cs" />
+    <Compile Include="Model\storage_mgmt\SANSwitch.cs" />
+    <Compile Include="Model\storage_mgmt\StorageSystem.cs" />
+    <Compile Include="Model\storage_mgmt\Tape.cs" />
+    <Compile Include="Model\storage_mgmt\TapeLibrary.cs" />
+    <Compile Include="Model\tickets\cmdbAbstractObject.cs" />
+    <Compile Include="Model\tickets\Contact.cs" />
+    <Compile Include="Model\tickets\lnkContactToTicket.cs" />
+    <Compile Include="Model\tickets\lnkFunctionalCIToTicket.cs" />
+    <Compile Include="Model\tickets\Location.cs" />
+    <Compile Include="Model\tickets\Organization.cs" />
+    <Compile Include="Model\tickets\ResponseTicketTTO.cs" />
+    <Compile Include="Model\tickets\ResponseTicketTTR.cs" />
+    <Compile Include="Model\tickets\Service.cs" />
+    <Compile Include="Model\tickets\ServiceFamily.cs" />
+    <Compile Include="Model\tickets\ServiceSubcategory.cs" />
+    <Compile Include="Model\tickets\User.cs" />
+    <Compile Include="Model\tickets\WorkOrder.cs" />
+    <Compile Include="Model\type\ExternalField.cs" />
+    <Compile Include="Model\type\ExternalKey.cs" />
+    <Compile Include="Model\virtualization_mgmt\Farm.cs" />
+    <Compile Include="Model\virtualization_mgmt\Hypervisor.cs" />
+    <Compile Include="Model\virtualization_mgmt\LogicalInterface.cs" />
+    <Compile Include="Model\virtualization_mgmt\Server.cs" />
+    <Compile Include="Model\virtualization_mgmt\VirtualDevice.cs" />
+    <Compile Include="Model\virtualization_mgmt\VirtualHost.cs" />
+    <Compile Include="Model\virtualization_mgmt\VirtualMachine.cs" />
+    <Compile Include="Model\welcome_itil\AbstractResource.cs" />
+    <Compile Include="Model\welcome_itil\ResourceAdminMenu.cs" />
+    <Compile Include="Model\welcome_itil\ResourceRunQueriesMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
